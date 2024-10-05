@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>팝업 리스트</title>
+  <link rel="stylesheet" href="../../lib/bootstrap.css">
+  <link rel="stylesheet" href="../../lib/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <!-- script -->
+  <script src="../../lib/jquery-3.7.1.min.js"></script>
+  <script src="../../lib/gsap.min.js"></script>
+  <script src="../../lib/bootstrap.min.js"></script>
+  <script src="../../lib/swiper-bundle.min.js"></script>
+  <script src="../../js/ui.js"></script>
+</head>
+<body>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-01">popup_메일 전송</button>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-02">popup_로그인 필요</button>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-03">popup_삭제확인</button>
+
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-04">popup_등록 취소</button>
+
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-05">popup_등록 확인</button>
+
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-06">popup_쿠폰상세</button>
+
+
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-preview">클래스 미리보기</button>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-review">리뷰쓰기</button>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-write">커뮤니티 글쓰기</button>
+
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-profile-01">비밀번호 변경</button>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-profile-02">비밀번호 변경</button>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-profile-03">닉네임 변경</button>
+<button type="button" class="btn btn-lg btn-black" data-bs-toggle="modal" data-bs-target="#modal-profile-04">휴대폰 번호 변경하기</button>
+
+
+
+<div class="modal fade" id="modal-01" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p><b>메일이 전송되었습니다. <br>메일함을 확인해주세요.</b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-blue" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-02" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p><b>로그인이 필요한 서비스입니다.</b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-black-line" data-bs-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-lg btn-blue" data-bs-dismiss="modal">로그인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-03" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p><b>삭제하시겠습니까?</b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-black-line" data-bs-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-lg btn-blue" data-bs-dismiss="modal">삭제</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-04" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p><b>등록을 취소하겠습니까?</b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-black-line" data-bs-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-lg btn-blue" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-05" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p><b>등록되었습니다.</b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-blue" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-06" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>첫 수업 고객 쿠폰</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="coupon-con">
+          <dl>
+            <dt><span class="tag">반짝쿠폰</span>15,000</dt>
+            <dd>사용기한 : 2024.03.02 ~ 2020.04.08</dd>
+          </dl>
+          <p>신규 회원을 대상으로 첫 수강 시 사용할 수 있는 20% 할인 쿠폰입니다. 모든 강의에 적용 가능하며, 쿠폰은 발급일로부터 30일 이내에 사용해야 합니다. 해당 쿠폰은 신규 회원만 사용 가능하며, 다른 할인 혜택과
+          중복 적용되지 않습니다. 사용기한 내 사용하지 않은 쿠폰은 자동 소멸되며, 일부 특별 기획 강의는 제외될 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal 미리보기 -->
+<div class="modal fade" id="modal-preview" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>클래스 미리보기</h1>
+        <p>유학 없이도 유창한 한국어, 나 혼자서 100% 한국어 독학법</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-player">
+          <video poster="" loop="true" muted="true" width="100%" height="100%" playsinline controls>
+            <source src="../../images/thumb/video1.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal 리뷰 -->
+<div class="modal fade" id="modal-review" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-review">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>리뷰 쓰기</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="reivew-form">
+          <p class="reivew-title">
+            <img src="../../images/thumb/@img-thumb.png" alt="">
+            유학 없이도 유창한 한국어, 나 혼자서 100% 한국어 독학법
+          </p>
+          <div class="review-write">
+            <h3>클래스에 대한 만족도를 알려주세요</h3>
+            <div class="block">
+              <div>
+                <img src="../../images/ico-star.svg" alt="">
+                <img src="../../images/ico-star.svg" alt="">
+                <img src="../../images/ico-star.svg" alt="">
+                <img src="../../images/ico-star.svg" alt="">
+                <img src="../../images/ico-star.svg" alt="">
+              </div>
+              <p class="select">선택하세요</p>
+            </div>
+          </div>
+          <div class="review-write">
+            <h3>어떤 점이 좋았나요?</h3>
+            <div class="block">
+              <textarea name="" id="" placeholder="최소 10자 이상 입력해주세요."></textarea>
+              <p class="text-num">0 / 2,000</p>
+            </div>
+          </div>
+          <div class="photo-upload">
+            <div class="file-add">
+              <img src="../../images/ico-camera.svg" alt=""> 사진 첨부하기
+              <input type="file">
+            </div>
+            <ul>
+              <li class="image"><img src="../../images/thumb/@img-thumb.png" alt=""><button type="button"><img
+                    src="../../images/ico-delect.svg" alt=""></button></li>
+              <li class="image"><img src="../../images/thumb/@img-thumb.png" alt=""><button type="button"><img
+                    src="../../images/ico-delect.svg" alt=""></button></li>
+              <li class="image"><img src="../../images/thumb/@img-thumb.png" alt=""><button type="button"><img
+                    src="../../images/ico-delect.svg" alt=""></button></li>
+              <li class="image"><img src="../../images/thumb/@img-thumb.png" alt=""><button type="button"><img
+                    src="../../images/ico-delect.svg" alt=""></button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal" class="btn btn-lg btn-black-line">취소</button>
+        <button type="button" class="btn btn-lg btn-blue">등록</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal 커뮤니티 글쓰기 -->
+<div class="modal fade" id="modal-write" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-review">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>커뮤니티 글쓰기</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="reivew-form">
+          <div class="review-write">
+            <div class="block">
+              <textarea name="" id="" placeholder="최소 10자 이상 입력해주세요."></textarea>
+              <p class="text-num">0 / 2,000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal" class="btn btn-lg btn-black-line">취소</button>
+        <button type="button" class="btn btn-lg btn-blue">등록</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="modal-profile-01" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-review">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>비밀번호 변경</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="reivew-form">
+          <dl class="modal-form">
+            <dt>현재 비밀번호</dt>
+            <dd><input type="password" placeholder="비밀번호를 입력해주세요." value=""></dd>
+          </dl>
+          <dl class="modal-form">
+            <dt>현재 비밀번호</dt>
+            <dd>
+              <p><input type="password" placeholder="새 비밀번호를 입력해주세요." value=""></p>
+              <p><input type="password" placeholder="새 비밀번호를 한번 더 입력해주세요." value=""></p>
+            </dd>
+            <dd class="sm-text">영문 소문자/숫자/특수문자 중 2가지 이상 조합, 8자 이상</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal" class="btn btn-lg btn-black-line">취소</button>
+        <button type="button" class="btn btn-lg btn-blue">변경하기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-profile-02" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-review">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>비밀번호 변경</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="reivew-form">
+          <dl class="modal-form">
+            <dt>휴대폰 번호</dt>
+            <dd><input type="text" placeholder="- 없이 작성해주세요" value=""></dd>
+          </dl>
+          <dl class="modal-form">
+            <dt>인증코드</dt>
+            <dd>
+              <p class="gap-1rem">
+                <input type="text" placeholder="인증번호를 입력하세요" value="">
+                <span class="timer">
+                  <button type="button"><img src="../../images/ico-x.svg" alt=""></button>
+                  02:27
+                </span>
+              </p>
+            </dd>
+            <dd class="sm-text">인증코드가 발송되었습니다. 3분 이내에 입력해주세요.</dd>
+          </dl>
+          <dl class="msg-text">
+            <dt>인증번호를 받지 못하셨나요?</dt>
+            <dd><button type="button">인증번호 다시 보내기</button></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-blue">인증번호 보내기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-profile-03" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-review">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>닉네임 변경</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="reivew-form">
+          <dl class="modal-form">
+            <dd><input type="text" placeholder="아이디벨" value=""></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-blue">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-profile-04" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-review">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>휴대폰 번호 변경하기</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="reivew-form">
+          <dl class="modal-form">
+            <dt>휴대폰 번호</dt>
+            <dd><input type="text" placeholder="- 없이 작성해주세요" value=""></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-lg btn-blue">인증번호 보내기</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

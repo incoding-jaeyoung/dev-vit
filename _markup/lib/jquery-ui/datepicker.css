@@ -1,0 +1,6 @@
+
+@import url('jquery-ui.min.css');
+@import url('datepicker-theme/datepicker-theme.css');
+
+input[type=text].datepicker{display: inline-flex; position: relative; background: url(../../images/ico-calender.svg) no-repeat right 0.8rem center;}
+input[type=text].range-picker{display: inline-flex; position: relative; background: url(../../images/ico-calender.svg) no-repeat right 0.8rem center;}

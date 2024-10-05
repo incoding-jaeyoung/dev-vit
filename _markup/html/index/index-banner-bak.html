@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HONDA Experience Space</title>
+  <!-- css -->
+    <link rel="stylesheet" href="../../_lib/bootstrap.min.css">
+  <link rel="stylesheet" href="../../_lib/swiper.min.css">
+  <link rel="stylesheet" href="../../css/app.css">
+  <!-- script -->
+  <script src="../../_lib/jquery-3.7.1.min.js"></script>
+  <script src="../../_lib/bootstrap.min.js"></script>
+  <script src="../../_lib/swiper.min.js"></script>
+  
+  <script src="../../js/common.js"></script>
+</head>
+<body>
+<div class="modal fade" id="modal-banner" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-banner">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="swiper indexSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="../../images/@img_popup.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../images/@img_popup.png" alt=""></a></div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"><img src="../../images/ico-banner-prev.svg" alt=""></div>
+        <div class="swiper-button-next"><img src="../../images/ico-banner-next.svg" alt=""></div>
+        <div class="swiper-pagination-banner"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal">오늘그만보기</button>
+        <button type="button" data-bs-dismiss="modal"><img src="../../images/ico_x_w.svg" alt="">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $('#modal-banner').modal('show');
+  });
+</script>
+</body>
+</html>

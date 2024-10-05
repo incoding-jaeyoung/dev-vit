@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* Pretendard */
+@font-face{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 300;
+    src: local('PretendardLight'),
+    url('fonts/Pretendard/Pretendard-Light.woff2') format('woff2'),
+    url('fonts/Pretendard/Pretendard-Light.woff') format('woff'),
+    url('fonts/Pretendard/Pretendard-Light.ttf') format('truetype'),
+    url('fonts/Pretendard/Pretendard-Light.ttf') format('opentype');
+}
+
+
+@font-face{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PretendardRegular'),
+    url('fonts/Pretendard/Pretendard-Regular.woff2') format('woff2'),
+    url('fonts/Pretendard/Pretendard-Regular.woff') format('woff'),
+    url('fonts/Pretendard/Pretendard-Regular.ttf') format('truetype'),
+    url('fonts/Pretendard/Pretendard-Regular.ttf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 500;
+    src: local('PretendardMedium'),
+    url('fonts/Pretendard/Pretendard-Medium.woff2') format('woff2'),
+    url('fonts/Pretendard/Pretendard-Medium.woff') format('woff'),
+    url('fonts/Pretendard/Pretendard-Medium.ttf') format('truetype'),
+    url('fonts/Pretendard/Pretendard-Medium.ttf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 600;
+    src: local('PretendardSemiBold'),
+    url('fonts/Pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+    url('fonts/Pretendard/Pretendard-SemiBold.woff') format('woff'),
+    url('fonts/Pretendard/Pretendard-SemiBold.ttf') format('truetype'),
+    url('fonts/Pretendard/Pretendard-SemiBold.ttf') format('opentype');
+}
+
+
+@font-face{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PretendardBold'),
+    url('fonts/Pretendard/Pretendard-Bold.woff2') format('woff2'),
+    url('fonts/Pretendard/Pretendard-Bold.woff') format('woff'),
+    url('fonts/Pretendard/Pretendard-Bold.ttf') format('truetype'),
+    url('fonts/Pretendard/Pretendard-Bold.ttf') format('opentype');
+}
